@@ -132,3 +132,4 @@ dmypy.json
 /logs*/
 *.wav
 *.pt
+/hifi-gan-0.3.1
