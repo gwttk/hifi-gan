@@ -51,15 +51,15 @@ def load_local():
     return model.net_g
 
 def load_remote():
-    return torch.hub.load("vtuber-plan/hifi-gan:v0.2.1", "hifigan_48k", force_reload=True)
+    return torch.hub.load("vtuber-plan/hifi-gan:v0.3.1", "hifigan_48k", force_reload=True)
 
 device = "cpu"
 
 # Load Remote checkpoint
-# hifigan = load_remote().to(device)
+hifigan = load_remote().to(device)
 
 # Load Local checkpoint
-hifigan = load_local().to(device)
+# hifigan = load_local().to(device)
 
 # Load audio
 wav, sr = torchaudio.load("zszy_48k.wav")
